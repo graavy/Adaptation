@@ -10,15 +10,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String theList[]={"Vsause","Veritasium","Minuite Physics","Smarter Everyday","Dong"};
-        ListAdapter theadapter =new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,theList);
+        String theList[]={"Vsause","Veritasium","Minuite Physics","Smarter Everyday","Dong","Numberphile","Mathologer"};
+        ListAdapter theadapter =new ArrayAdapter<String>(this,R.layout.row_layout,R.id.textView1,theList);
         ListView theListView = (ListView) findViewById(R.id.listview);
         theListView.setAdapter(theadapter);
         theListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
